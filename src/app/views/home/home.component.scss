@@ -1,0 +1,82 @@
+.container {
+  padding: 40px 5px;
+  background-color: #fff4;
+  .b-logo {
+    width: 50%;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+  }
+  .b-desc,
+  .b-name {
+    text-align: center;
+    color: #fff;
+  }
+}
+.b-info {
+  width: 100%;
+  padding: 30px 5px;
+  margin: 40px 0;
+  background-color: #eeea;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 5px #000;
+  img {
+    width: 100px;
+    float: left;
+  }
+  .desc {
+    float: right;
+    width: 160px;
+    font-size: 28px;
+    line-height: 2;
+    text-align: right;
+    color: #000;
+  }
+}
+
+/* For Bigger Screens */
+@media screen and (min-width: 500px) {
+  .container {
+    .b-logo {
+      width: 200px;
+    }
+    .b-desc,
+    .b-name {
+      font-size: 22px;
+    }
+    .btns {
+      .register-btn,
+      .home-btn {
+        width: 170px;
+        height: 40px;
+        font-size: 25px;
+        border: 2px solid #fff;
+      }
+    }
+  }
+  .b-info {
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 16px;
+    img {
+      width: 140px;
+    }
+    .desc {
+      width: 250px;
+      font-size: 30px;
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .b-info {
+    width: 75%;
+    padding: 10px 100px;
+    img {
+      width: 160px;
+    }
+    .desc {
+      width: 300px;
+    }
+  }
+}

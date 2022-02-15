@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: cocon;
+  src: url("./assets/cocon.otf");
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  font-family: cocon, sans-serif, serif;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./assets/bg.svg");
+  background-position: center top;
+  margin: 0;
+  padding-top: 50px;
+}
+a {
+  color: #0f5;
+  font-weight: bold;
+  text-decoration: none;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+/* Information & Search */
+.info {
+  width: 100%;
+  background: #5f09;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: content-box;
+  padding: 5px 0;
+  #search {
+    width: 200px;
+  }
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    img {
+      width: 35px;
+    }
+  }
+}
+
+.container {
+  margin: 20px auto;
+  padding: 10px 0;
+  background: #0005;
+  text-align: center;
+}
+
+/* Footer Copyright */
+footer {
+  background: #0005;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  color: #fff;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 75%;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 5px;
+  }
+}

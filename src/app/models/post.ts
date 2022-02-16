@@ -6,6 +6,8 @@ export class Post{
   title: string;
   content: string;
   date: string;
+  imageSrc: string;
+  categories: string[];
   author: User;
   comments: Comment[]
 }

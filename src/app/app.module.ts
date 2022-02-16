@@ -12,6 +12,9 @@ import { HomeComponent } from './views/home/home.component';
 import { SidebarComponent } from './views/sidebar/sidebar.component';
 import { ToggleSideBarDirective } from './directives/toggle-side-bar.directive';
 import { CommonModule } from '@angular/common';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,13 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     BrowserAnimationsModule,
     FontAwesomeModule,
-    PostsModule
+    PostsModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,8 @@ import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectedPostModule } from './views/selected-post/selected-post.module';
+import { UsersModule } from './views/users/users.module';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
     EffectsModule.forRoot([]),
     BrowserAnimationsModule,
     FontAwesomeModule,
-    PostsModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    HttpClientModule
+    HttpClientModule,
+    PostsModule,
+    SelectedPostModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

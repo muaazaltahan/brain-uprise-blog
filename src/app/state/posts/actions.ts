@@ -2,11 +2,11 @@ import { createAction, props } from "@ngrx/store";
 import { Post } from "src/app/models/post";
 
 export enum ActionTypes {
-  load = "[Posts] Load",
-  loadSuccess = "[Posts] Load Success",
-  loadFailed = "[Posts] Load Failed"
+  loadPosts = "[Posts] Load Posts",
+  loadPostsSuccess = "[Posts] Load Posts Success",
+  loadPostsFailed = "[Posts] Load Posts Failed"
 }
 
-export const load = createAction(ActionTypes.load);
-export const loadSuccess = createAction(ActionTypes.loadSuccess, props<{posts: Post[]}>());
-export const loadFailed = createAction(ActionTypes.loadFailed, props<{error: any}>());
+export const loadPosts = createAction(ActionTypes.loadPosts);
+export const loadPostsSuccess = createAction(ActionTypes.loadPostsSuccess, props<{posts: Post[]}>());
+export const loadPostsFailed = createAction(ActionTypes.loadPostsFailed, props<{error: any}>());

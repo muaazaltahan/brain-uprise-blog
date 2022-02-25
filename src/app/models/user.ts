@@ -3,5 +3,4 @@ export class User{
   name: string;
   lastSeen: string;
   imageSrc: string;
-  postIds: number[];
 }

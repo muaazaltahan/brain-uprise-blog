@@ -1,7 +1,7 @@
 <div class="posts">
   <div class="post" *ngFor="let post of posts | async">
     <div class="p-title">
-      <a href="posts/post">{{post.title}}</a>
+      <a (click)="goTo('blog/posts/' + post.id.toString(), post)">{{post.title}}</a>
     </div>
     <div class="p-image">
       <img [src]="post.imageSrc" [alt]="post.title">
@@ -16,7 +16,7 @@
       {{post.date}}
     </div>
     <div class="p-author">
-      <a>{{post.author}}</a>
+      <a >{{post.author.name}}</a>
     </div>
   </div>
 </div>

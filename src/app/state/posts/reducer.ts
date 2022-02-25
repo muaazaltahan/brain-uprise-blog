@@ -27,8 +27,8 @@ export const initialState = adapter.getInitialState({
 
 const testsReducer = createReducer(
   initialState,
-  on(postActions.loadSuccess, (state, {posts}) => adapter.setAll(posts, state)),
-  on(postActions.loadFailed, (state, {error}) => ({...state, error}))
+  on(postActions.loadPostsSuccess, (state, {posts}) => adapter.setAll(posts, state)),
+  on(postActions.loadPostsFailed, (state, {error}) => ({...state, error}))
 );
 
 export function reducer(state: State, action: Action) {

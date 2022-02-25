@@ -6,13 +6,13 @@ import { mergeMap, map, catchError } from "rxjs/operators";
 import { of } from "rxjs";
 
 @NgModule()
-export class PostsEffects {
+export class UsersEffects {
 
-  loadPosts$ = createEffect(() => this.actions$.pipe(
-    ofType(ActionTypes.loadPosts),
-    mergeMap(() => this.http.get('http://localhost:3000/posts').pipe(
-      map(posts => ({type: ActionTypes.loadPostsSuccess, posts})),
-      catchError(error => of({type: ActionTypes.loadPostsFailed, error}))
+  loadUsers$ = createEffect(() => this.actions$.pipe(
+    ofType(ActionTypes.loadUsers),
+    mergeMap(() => this.http.get('http://localhost:3000/users').pipe(
+      map(users => ({type: ActionTypes.loadUsersSuccess, users})),
+      catchError(error => of({type: ActionTypes.loadUsersFailed, error}))
     ))
   ));
 

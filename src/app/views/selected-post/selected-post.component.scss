@@ -1,0 +1,60 @@
+.container {
+  .post {
+    width: 100%;
+    background: #0005;
+    overflow: hidden;
+    color: #fff;
+    .p-title {
+      width: 80%;
+      margin: auto;
+      border-radius: 10px;
+      font-size: 25px;
+      background: #5f0;
+    }
+    .p-image {
+      margin: 10px auto;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .p-cont {
+      font-size: 20px;
+    }
+    .p-category,
+    .p-date,
+    .p-author {
+      float: left;
+      margin: 10px;
+    }
+  }
+  .comments {
+    border: 1px solid #000;
+    margin: 10px 0;
+    padding: 5px;
+    background: #0005;
+    .comment {
+      margin: 10px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 5px;
+      overflow: hidden;
+      .c-author,
+      .c-cont,
+      .c-date {
+        float: right;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+/* For Bigger Screens */
+@media screen and (min-width: 800px) {
+  .container {
+    border-radius: 10px 10px 0 0;
+    .comments {
+      border-radius: 10px;
+    }
+  }
+}

@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Post } from 'src/app/models/post';
+import { setSelectedPostId } from 'src/app/state/posts/actions';
 import { getPosts } from 'src/app/state/posts/reducer';
-import { set } from 'src/app/state/selected-post/actions';
 import { getUserById } from 'src/app/state/users/reducer';
 
 @Component({
@@ -18,11 +18,11 @@ export class PostsComponent {
 
   goTo(path: string, post: Post) {
     this.router.navigate([path]);
-    this.setSelectedPost(post);
+    this.setSelectedPost(post.id);
   }
 
-  setSelectedPost(post: Post) {
-    this.store.dispatch(set({post}))
+  setSelectedPost(id: string) {
+    this.store.dispatch(setSelectedPostId({id}));
   }
 
   getUser(id: string) {

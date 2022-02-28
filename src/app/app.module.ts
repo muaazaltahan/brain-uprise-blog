@@ -15,8 +15,9 @@ import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { SelectedPostModule } from './views/selected-post/selected-post.module';
 import { UsersModule } from './views/users/users.module';
+import { SelectedPostComponent } from './views/selected-post/selected-post.component';
+import { CommentComponent } from './views/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { UsersModule } from './views/users/users.module';
     BaseComponent,
     HomeComponent,
     SidebarComponent,
-    ToggleSideBarDirective
+    ToggleSideBarDirective,
+    SelectedPostComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,6 @@ import { UsersModule } from './views/users/users.module';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     HttpClientModule,
     PostsModule,
-    SelectedPostModule,
     UsersModule
   ],
   providers: [],

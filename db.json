@@ -51,7 +51,7 @@
           "date": "2022-01-23 02:29:12",
           "replies": [
             {
-              "id": 4,
+              "id": 1,
               "author": {
                 "id": 5,
                 "name": "Belly",
@@ -59,7 +59,20 @@
                 "imageSrc": "assets/logo.png"
               },
               "content": "Balanced incremental intranet",
-              "date": "2022-03-01 01:25:02"
+              "date": "2022-03-01 01:25:02",
+              "replies": [
+                {
+                  "id": 1,
+                  "author": {
+                    "id": 3,
+                    "name": "Deedee Jeeves",
+                    "lastSeen": "3/18/2021",
+                    "imageSrc": "assets/logo.png"
+                  },
+                  "content": "Streamlined coherent orchestration",
+                  "date": "2021-011-11 01:21:00"
+                }
+              ]
             }
           ]
         }

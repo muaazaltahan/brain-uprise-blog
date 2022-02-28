@@ -1,39 +1,26 @@
-<div class="post text-light">
-  <div class="p-title fs-3">{{(selectedPost | async).title}}</div>
-  <div class="p-image">
-    <img [src]="(selectedPost | async).imageSrc">
-  </div>
-  <div class="p-cont fs-5">
-    {{(selectedPost | async).content}}
-  </div>
-  <div class="p-category float-start fs-6">
-    <a class="p-1" href="categories/category" *ngFor="let ct of (selectedPost | async).categories">
-      {{ct}}
-    </a>
-  </div>
-  <div class="p-date float-end fs-6">
-    {{(selectedPost | async).date}}
-  </div>
-  <div class="p-author fs-6">
-    <a href="users/otheruser">{{(selectedPost | async).author.name}}</a>
-  </div>
-</div>
-<div class="info">Comments</div>
-<div class="comments text-light">
-  <div class="comment border rounded m-1" *ngFor="let comment of (selectedPost | async).comments">
-    <div class="c-author">
-      <a href="users/otheruser">{{comment.author.name}}</a>
+<ng-container *ngIf="selectedPost | async as _selectedPost">
+  <div class="post text-light">
+    <div class="p-title fs-3">{{_selectedPost.title}}</div>
+    <div class="p-image">
+      <img [src]="_selectedPost.imageSrc" class="w-50">
     </div>
-    <div class="c-cont">{{comment.content}}</div>
-    <div class="-c-date">{{comment.date}}</div>
-    <div class="replies" *ngIf="comment.replies">
-      <div class="comment border rounded m-1" *ngFor="let reply of comment.replies">
-        <div class="c-author">
-          <a href="users/otheruser">{{reply.author.name}}</a>
-        </div>
-        <div class="c-cont">{{reply.content}}</div>
-        <div class="c-date">{{reply.date}}</div>
-      </div>
+    <div class="p-cont fs-5">
+      {{_selectedPost.content}}
+    </div>
+    <div class="p-category float-start fs-6">
+      <a class="p-1" href="categories/category" *ngFor="let ct of _selectedPost.categories">
+        {{ct}}
+      </a>
+    </div>
+    <div class="p-date float-end fs-6">
+      {{_selectedPost.date}}
+    </div>
+    <div class="p-author fs-6">
+      <a href="users/otheruser">{{_selectedPost.author.name}}</a>
     </div>
   </div>
-</div>
+  <div class="info">Comments</div>
+  <div class="comments text-light">
+    <app-comment *ngFor="let comment of _selectedPost.comments" [comment]="comment"></app-comment>
+  </div>
+</ng-container>

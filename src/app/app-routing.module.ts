@@ -11,7 +11,7 @@ const routes: Routes = [
     {path: '', component: PostsComponent},
     {path: 'posts/:id', component: SelectedPostComponent}
   ]},
-  // {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({

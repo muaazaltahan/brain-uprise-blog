@@ -2,7 +2,7 @@ import { Comment } from "./comment";
 import { User } from "./user";
 
 export class Post{
-  id: number;
+  id: string;
   title: string;
   content: string;
   date: string;

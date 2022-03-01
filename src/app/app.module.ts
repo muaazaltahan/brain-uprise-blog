@@ -17,7 +17,7 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './views/users/users.module';
 import { SelectedPostComponent } from './views/selected-post/selected-post.component';
-import { CommentComponent } from './views/comment/comment.component';
+import { SharedModule } from './views/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { CommentComponent } from './views/comment/comment.component';
     HomeComponent,
     SidebarComponent,
     ToggleSideBarDirective,
-    SelectedPostComponent,
-    CommentComponent
+    SelectedPostComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +39,8 @@ import { CommentComponent } from './views/comment/comment.component';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     HttpClientModule,
     PostsModule,
-    UsersModule
+    UsersModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { faFacebook, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,5 +13,6 @@ export class SidebarComponent {
   instagram = faInstagram;
   facebook = faFacebook;
   telegram = faTelegram;
+  github = faGithub;
 
 }

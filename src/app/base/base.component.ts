@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { faCogs, faHome, faList, faPlusCircle, faQuestionCircle, faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
-import { loadUsers } from '../state/users/actions';
-import { loadPosts } from '../state/posts/actions';
 
 @Component({
   selector: 'app-base',
   templateUrl: './base.component.html',
   styleUrls: ['./base.component.scss']
 })
-export class BaseComponent implements OnInit {
+export class BaseComponent {
 
   constructor(private router: Router, private store: Store) {}
 
@@ -26,11 +24,6 @@ export class BaseComponent implements OnInit {
 
   goTo(path: string) {
     this.router.navigate([path]);
-  }
-
-  ngOnInit(): void {
-    this.store.dispatch(loadUsers());
-    this.store.dispatch(loadPosts());
   }
 
 }

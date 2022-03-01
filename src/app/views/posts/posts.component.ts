@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Post } from 'src/app/models/post';
+import { User } from 'src/app/models/user';
 import { setSelectedPostId } from 'src/app/state/posts/actions';
 import { getPosts } from 'src/app/state/posts/reducer';
 import { getUserById } from 'src/app/state/users/reducer';
@@ -25,8 +26,8 @@ export class PostsComponent {
     this.store.dispatch(setSelectedPostId({id}));
   }
 
-  getUser(id: string) {
-    // return this.store.select(getUserById(id));
+  getUser(id: string): Observable<User> {
+    return this.store.select(getUserById(id));
   }
 
   posts: Observable<Post[]> = this.store.select(getPosts);

@@ -15,8 +15,6 @@
     <div class="p-date">
       {{post.date}}
     </div>
-    <div class="p-author">
-      <a >{{post.author.name}}</a>
-    </div>
+    <app-author class="p-author d-block" [author]="post.author"></app-author>
   </div>
 </div>

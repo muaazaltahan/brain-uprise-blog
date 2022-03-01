@@ -1,7 +1,5 @@
 <div class="comment border rounded m-1">
-  <div class="c-author">
-    <a href="users/otheruser">{{comment.author.name}}</a>
-  </div>
+  <app-author [author]="comment.author" class="c-author"></app-author>
   <div class="c-cont">{{comment.content}}</div>
   <div class="-c-date">{{comment.date}}</div>
   <div class="replies" *ngIf="comment.replies">

@@ -26,31 +26,6 @@
       }
     }
   }
-  .suggested {
-    overflow: hidden;
-    width: 100%;
-    text-align: center;
-    span {
-      text-decoration: underline;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .post {
-      width: 100%;
-      border-bottom: 1px solid #fff;
-      .p-title {
-        font-size: 22px;
-      }
-      .p-image {
-        width: 100%;
-        img {
-          width: 50%;
-          margin: auto;
-          max-height: 100px;
-        }
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 500px) {

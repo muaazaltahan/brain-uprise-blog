@@ -15,9 +15,7 @@
     <div class="p-date float-end fs-6">
       {{_selectedPost.date}}
     </div>
-    <div class="p-author fs-6">
-      <a href="users/otheruser">{{_selectedPost.author.name}}</a>
-    </div>
+    <app-author [author]="_selectedPost.author" class="fs-5"></app-author>
   </div>
   <div class="info">Comments</div>
   <div class="comments text-light">

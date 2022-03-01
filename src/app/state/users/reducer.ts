@@ -31,7 +31,9 @@ const feature = createFeatureSelector<UserState>('Users');
 
 export const getUsers = createSelector(feature,selectAll);
 
-export const getUserById = (id: number) => createSelector(
-  selectEntities,
+export const selectUserEntities = createSelector(feature, selectEntities);
+
+export const getUserById = (id: string) => createSelector(
+  selectUserEntities,
   entities => entities[id]
 );

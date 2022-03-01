@@ -5,6 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from 'src/app/state/posts/reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { PostsEffects } from 'src/app/state/posts/effects';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PostsEffects } from 'src/app/state/posts/effects';
   imports: [
     CommonModule,
     StoreModule.forFeature('posts',reducer),
-    EffectsModule.forFeature([PostsEffects])
+    EffectsModule.forFeature([PostsEffects]),
+    SharedModule
   ],
   exports: [PostsComponent]
 })

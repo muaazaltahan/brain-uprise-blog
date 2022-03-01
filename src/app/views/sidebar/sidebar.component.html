@@ -1,6 +1,5 @@
 <div id="sidebar" [appToggleSideBar]="show">
-  <ul class="follow-us text-center">
-    <li class="fs-4">social media</li> <br>
+  <ul class="follow-us text-center mt-2">
     <li>
       <a target="_blank" class="text-light" href="https://www.facebook.com/DeveloperMuaaz/">
         <fa-icon [icon]="facebook" size="2x"></fa-icon>
@@ -16,24 +15,33 @@
         <fa-icon [icon]="instagram" size="2x"></fa-icon>
       </a>
     </li>
+    <li>
+      <a target="_blank" class="text-light" href="https://www.github.com/muaazaltahan/">
+        <fa-icon [icon]="github" size="2x"></fa-icon>
+      </a>
+    </li>
   </ul>
-  <div class="suggested">
-    <span>منشورات مقترحة:</span>
-    <a href="posts/post">
-      <div class="post">
-        <div class="p-title">عنوان المنشور</div>
-        <div class="p-image">
-          <img src="assets/logo.png">
-        </div>
+  <div class="w-100 mt-2 text-dark">
+    <div class="text-center bg-light fs-5 p-1">Take a look at my other projects</div>
+    <div class="border rounded p-1 m-1 fs-6 text-light">
+      Project: Quiz App <br>
+      Description: A simple quiz front end application by angular. <br>
+      <div class="text-center">
+        <a href="https://github.com/muaazaltahan/quiz-app" target="_blank">
+          Link On Github
+          <fa-icon [icon]="github" size="lg"></fa-icon>
+        </a>
       </div>
-    </a>
-    <a href="posts/post">
-      <div class="post">
-        <div class="p-title">عنوان المنشور</div>
-        <div class="p-image">
-          <img src="assets/logo.png">
-        </div>
+    </div>
+    <div class="border rounded p-1 m-1 fs-6 text-light">
+      Project: Blog <br>
+      Description: The pure version of this blog (without angular).<br>
+      <div class="text-center">
+        <a href="https://github.com/muaazaltahan/blog" target="_blank">
+          Link On Github
+          <fa-icon [icon]="github" size="lg"></fa-icon>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 </div>

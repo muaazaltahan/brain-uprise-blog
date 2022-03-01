@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './views/users/users.module';
 import { SelectedPostComponent } from './views/selected-post/selected-post.component';
 import { SharedModule } from './views/shared/shared.module';
+import { FooterComponent } from './views/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SharedModule } from './views/shared/shared.module';
     HomeComponent,
     SidebarComponent,
     ToggleSideBarDirective,
-    SelectedPostComponent
+    SelectedPostComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

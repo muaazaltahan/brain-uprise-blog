@@ -1,5 +1,13 @@
 # BrainUpriseBlog
 
+This project is a new version of my [blog](https://github.com/muaazaltahan/blog) project.  
+I used HTML, CSS, JavaScript, AJAX in the old project  
+For this one I used Angular framework.  
+  
+this work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).  
+
+To ask for permissions beyond the scope of this license [tell me at telegram](https://t.me/muaazaltahan).  
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server

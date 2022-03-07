@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthorComponent } from './author/author.component';
 import { CommentComponent } from './comment/comment.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -9,7 +11,10 @@ import { CommentComponent } from './comment/comment.component';
     CommentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AuthorComponent,

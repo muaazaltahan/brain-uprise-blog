@@ -5,16 +5,21 @@ import { EffectsModule } from '@ngrx/effects';
 import { reducer } from 'src/app/state/users/reducer';
 import { UsersEffects } from 'src/app/state/users/effects';
 import { UsersComponent } from './users.component';
+import { SelectedUserComponent } from './selected-user/selected-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    UsersComponent
+    UsersComponent,
+    SelectedUserComponent
   ],
   imports: [
     CommonModule,
     StoreModule.forFeature('users',reducer),
-    EffectsModule.forFeature([UsersEffects])
+    EffectsModule.forFeature([UsersEffects]),
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     UsersComponent

@@ -9,8 +9,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BaseComponent } from './base/base.component';
 import { PostsModule } from './views/posts/posts.module';
 import { HomeComponent } from './views/home/home.component';
-import { SidebarComponent } from './views/sidebar/sidebar.component';
-import { ToggleSideBarDirective } from './directives/toggle-side-bar.directive';
 import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
@@ -25,8 +23,6 @@ import { FooterComponent } from './views/footer/footer.component';
     AppComponent,
     BaseComponent,
     HomeComponent,
-    SidebarComponent,
-    ToggleSideBarDirective,
     SelectedPostComponent,
     FooterComponent
   ],

@@ -27,7 +27,7 @@ export function reducer(state: UserState, action: Action) {
 
 const { selectAll, selectEntities } = adapter.getSelectors();
 
-const feature = createFeatureSelector<UserState>('Users');
+const feature = createFeatureSelector<UserState>('users');
 
 export const getUsers = createSelector(feature,selectAll);
 

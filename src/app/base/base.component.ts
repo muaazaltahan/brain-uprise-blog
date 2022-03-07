@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { faCogs, faHome, faList, faPlusCircle, faQuestionCircle, faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faList, faPlusCircle, faQuestionCircle, faUserCircle, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
 
 @Component({
@@ -12,16 +12,15 @@ export class BaseComponent {
 
   constructor(private router: Router, private store: Store) {}
 
+
+  // Font Awesome Icons
   home = faHome;
   user = faUserCircle;
-  settings = faCogs;
+  users = faUsers;
   about = faQuestionCircle;
   addPost = faPlusCircle;
-  list = faList;
-  search = faSearch;
 
-  showSidebar = false;
-
+  // Navigations
   goTo(path: string) {
     this.router.navigate([path]);
   }

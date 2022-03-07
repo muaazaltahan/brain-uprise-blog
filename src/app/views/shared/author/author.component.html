@@ -1,6 +1,6 @@
 <a>{{author.name}}</a>
 <div class="detail-box fs-6 bg-secondary rounded p-1">
   <img [src]="author.imageSrc" [alt]="author.name" class="author-img float-start">
-  name: <a routerLink="/users/user">{{author.name}}</a> <br>
+  name: <a [routerLink]="['/blog/users/'+author.id]">{{author.name}}</a> <br>
   last seen: {{author.lastSeen}}
 </div>

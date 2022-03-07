@@ -12,14 +12,14 @@ import { selectPostById, PostState } from 'src/app/state/posts/reducer';
 })
 export class SelectedPostComponent implements OnInit {
 
-  constructor(private store: Store<PostState>, private activatedRoute: ActivatedRoute) { }
+  constructor(private store: Store<PostState>, private route: ActivatedRoute) { }
 
   selectedPostId: string;
 
   selectedPost: Observable<Post>;
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
+    this.route.params.subscribe(params => {
       this.selectedPostId = params.id;
     });
     this.selectedPost = this.store.select(selectPostById(this.selectedPostId));

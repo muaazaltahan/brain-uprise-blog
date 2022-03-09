@@ -5,5 +5,5 @@ export class Comment{
   content: string;
   date: string;
   author: User;
-  replies: Comment[];
+  replies?: Comment[];
 }

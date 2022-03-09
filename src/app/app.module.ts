@@ -17,6 +17,7 @@ import { UsersModule } from './views/users/users.module';
 import { SelectedPostComponent } from './views/selected-post/selected-post.component';
 import { SharedModule } from './views/shared/shared.module';
 import { FooterComponent } from './views/footer/footer.component';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './views/footer/footer.component';
     BaseComponent,
     HomeComponent,
     SelectedPostComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

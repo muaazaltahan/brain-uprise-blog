@@ -1,0 +1,62 @@
+.container {
+  margin: 30px auto;
+  background: #fff5;
+  text-align: center;
+  .a-image {
+    width: 100%;
+    img {
+      margin: auto;
+      padding: 5px;
+      border-radius: 10px;
+      border: 1px solid #000;
+      width: 200px;
+    }
+  }
+  .a-name {
+    font-size: 25px;
+  }
+  .a-desc {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+  .a-contact {
+    font-size: 20px;
+    .contact {
+      width: 130px;
+      display: inline-block;
+      img {
+        width: 40px;
+        transition: width 0.2s, height 0.2s;
+      }
+      a {
+        color: #000;
+      }
+    }
+    .contact:hover img {
+      width: 43px;
+    }
+  }
+}
+
+/* For Bigger Screens */
+@media screen and (min-width: 800px) {
+  .container {
+    display: grid;
+    grid:
+      "image desc desc"
+      "con con con";
+    .a-image {
+      width: 200px;
+      grid-area: image;
+      img {
+        width: 100%;
+      }
+    }
+    .a-desc {
+      grid-area: desc;
+    }
+    .a-contact {
+      grid-area: con;
+    }
+  }
+}

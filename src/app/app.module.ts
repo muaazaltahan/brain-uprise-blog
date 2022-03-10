@@ -14,7 +14,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './views/users/users.module';
-import { SelectedPostComponent } from './views/selected-post/selected-post.component';
 import { SharedModule } from './views/shared/shared.module';
 import { FooterComponent } from './views/footer/footer.component';
 import { AboutComponent } from './views/about/about.component';
@@ -24,7 +23,6 @@ import { AboutComponent } from './views/about/about.component';
     AppComponent,
     BaseComponent,
     HomeComponent,
-    SelectedPostComponent,
     FooterComponent,
     AboutComponent
   ],

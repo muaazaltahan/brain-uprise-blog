@@ -43,14 +43,7 @@ const feature = createFeatureSelector<PostState>('posts');
 
 export const getPosts = createSelector(feature,selectAll);
 
-export const getSelectedPostId = (state: PostState) => state.selectedPostId;
-
 export const selectPostEntities = createSelector(feature, selectEntities);
-
-export const selectPostId = createSelector(
-  feature,
-  getSelectedPostId
-);
 
 export const selectPostById = (id: string) => createSelector(
   selectPostEntities,

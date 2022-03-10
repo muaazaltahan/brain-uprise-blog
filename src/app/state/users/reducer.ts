@@ -5,7 +5,7 @@ import { User } from 'src/app/models/user';
 
 export interface UserState extends EntityState<User> {
   error: any;
-  selectedUserId: number;
+  selectedUserId: string | null;
 }
 
 export const adapter: EntityAdapter<User> = createEntityAdapter<User>();
@@ -30,6 +30,11 @@ const { selectAll, selectEntities } = adapter.getSelectors();
 const feature = createFeatureSelector<UserState>('users');
 
 export const getUsers = createSelector(feature,selectAll);
+
+export const getSelectedUserId = createSelector(
+  feature,
+  (state)=>state.selectedUserId
+)
 
 export const selectUserEntities = createSelector(feature, selectEntities);
 

@@ -4,7 +4,7 @@ import { BaseComponent } from './base/base.component';
 import { AboutComponent } from './views/about/about.component';
 import { HomeComponent } from './views/home/home.component';
 import { PostsComponent } from './views/posts/posts.component';
-import { SelectedPostComponent } from './views/selected-post/selected-post.component';
+import { SelectedPostComponent } from './views/posts/selected-post/selected-post.component';
 import { SelectedUserComponent } from './views/users/selected-user/selected-user.component';
 import { UsersComponent } from './views/users/users.component';
 

@@ -7,15 +7,19 @@ import { UsersEffects } from 'src/app/state/users/effects';
 import { UsersComponent } from './users.component';
 import { SelectedUserComponent } from './selected-user/selected-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserPostsComponent } from './selected-user/user-posts/user-posts.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
     UsersComponent,
-    SelectedUserComponent
+    SelectedUserComponent,
+    UserPostsComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     StoreModule.forFeature('users',reducer),
     EffectsModule.forFeature([UsersEffects]),
     FormsModule,

@@ -9,10 +9,12 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SelectedPostComponent } from './selected-post/selected-post.component';
 
 @NgModule({
   declarations: [
-    PostsComponent
+    PostsComponent,
+    SelectedPostComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     SharedModule
   ],
-  exports: [PostsComponent]
+  exports: [
+    PostsComponent,
+    SelectedPostComponent
+  ]
 })
 export class PostsModule { }

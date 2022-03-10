@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/models/user';
+import { setSelectedUserId } from 'src/app/state/users/actions';
 import { getUserById, UserState } from 'src/app/state/users/reducer';
 
 @Component({
@@ -22,6 +23,7 @@ export class SelectedUserComponent implements OnInit {
       this.selectedUserId = params.id;
     })
     this.selectedUser = this.store.select(getUserById(this.selectedUserId));
+    this.store.dispatch(setSelectedUserId({id: this.selectedUserId}))
   }
 
 }

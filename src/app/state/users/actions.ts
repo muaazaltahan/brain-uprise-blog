@@ -11,4 +11,4 @@ export enum ActionTypes {
 export const loadUsers = createAction(ActionTypes.loadUsers);
 export const loadUsersSuccess = createAction(ActionTypes.loadUsersSuccess, props<{users: User[]}>());
 export const loadUsersFailed = createAction(ActionTypes.loadUsersFailed, props<{error: any}>());
-export const setSelectedUserId = createAction(ActionTypes.setSelectedUserId, props<{id: number}>());
+export const setSelectedUserId = createAction(ActionTypes.setSelectedUserId, props<{id: string}>());

@@ -7,12 +7,12 @@
 
   <!--posts-->
   <ng-container *ngIf="(posts | async).length > 0; else noPosts">
-    <div class="post" *ngFor="let post of posts | async">
+    <div class="post border rounded" *ngFor="let post of posts | async">
       <div class="p-title">
         <a (click)="goTo('blog/posts/' + post.id.toString(), post)">{{post.title}}</a>
       </div>
       <div class="p-image">
-        <img [src]="post.imageSrc" [alt]="post.title">
+        <img class="w-50 rounded" [src]="post.imageSrc" [alt]="post.title">
       </div>
       <div class="p-cont">
         {{post.content | slice:0:80}}

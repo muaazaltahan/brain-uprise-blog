@@ -1,3 +1,7 @@
+<div class="btn-group position-absolute top-0 start-50 translate-middle-x">
+  <div class="btn btn-success fs-4">تسجيل الدخول</div>
+  <div class="btn btn-danger fs-4">إنشاء حساب</div>
+</div>
 <div class="container">
   <div class="b-logo">
     <img src="assets/logo.png" alt="LOGO">
@@ -9,11 +13,11 @@
     مدونة تهتم بالعلوم التقنية وتكنولوجيا المعلومات
   </div>
   <div class="btn-group m-3">
-    <a [routerLink]="['blog']" class="btn btn-success fs-4">
+    <a routerLink="blog" class="btn btn-primary fs-4">
       تصفح المنشورات
     </a>
-    <a [routerLink]="['register']" class="btn btn-primary fs-4">
-      التسجيل
+    <a routerLink="about-me" class="btn btn-dark fs-4">
+      من نحن
     </a>
   </div>
 </div>

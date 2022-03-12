@@ -1,29 +1,31 @@
 <div class="posts">
   <!--search-->
-    <input
-      [formControl]="searchControl"
-      class="p-2 rounded border w-100" type="search"
-      placeholder="Search..." id="search">
+  <input [formControl]="searchControl" class="p-2 rounded border w-100" type="search"
+    placeholder="ابحث باسخدام محتوى المنشور أو عنوانه..." id="search">
 
   <!--posts-->
   <ng-container *ngIf="(posts | async).length > 0; else noPosts">
     <div class="post border rounded" *ngFor="let post of posts | async">
-      <div class="p-title">
+      <div class="p-title row p-1">
         <a (click)="goTo('blog/posts/' + post.id.toString(), post)">{{post.title}}</a>
       </div>
-      <div class="p-image">
-        <img class="w-50 rounded" [src]="post.imageSrc" [alt]="post.title">
+      <div class="row">
+        <div class="p-image col-sm-6 col-md-5 col-lg-4">
+          <img class="rounded" [src]="post.imageSrc" [alt]="post.title">
+        </div>
+        <div class="p-cont col-sm-6 col-md-7 col-lg-8">
+          {{post.content | slice:0:100}}...<a (click)="goTo('blog/posts/' + post.id.toString(), post)">read more</a>
+        </div>
       </div>
-      <div class="p-cont">
-        {{post.content | slice:0:80}}
+      <div class="p-category row">
+        <a *ngFor="let category of post.categories" class="ps-3 ms-1 text-light fw-bold w-auto">{{category}}</a>
       </div>
-      <div class="p-category">
-        <a *ngFor="let category of post.categories" class="p-1 m-1 text-light fw-bold">{{category}}</a>
+      <div class="row">
+        <div class="p-date col-6">
+          {{post.date}}
+        </div>
+        <app-author class="p-author col-6" [author]="post.author"></app-author>
       </div>
-      <div class="p-date">
-        {{post.date}}
-      </div>
-      <app-author class="p-author" [author]="post.author"></app-author>
     </div>
   </ng-container>
   <ng-template #noPosts>

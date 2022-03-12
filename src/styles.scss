@@ -17,6 +17,7 @@ body {
   background-position: center top;
   margin: 0;
   padding-top: 50px;
+  direction: rtl;
 }
 a {
   color: #0f5;
@@ -75,20 +76,12 @@ button {
   text-align: center;
   .post {
     margin: 30px auto;
-    display: grid;
     width: 100%;
     color: #fff;
-    grid:
-      "image image title title title"
-      "image image content content content"
-      "image image content content content"
-      "category category date author author";
     .p-title {
       font-size: 22px;
-      grid-area: title;
     }
     .p-image {
-      grid-area: image;
       max-width: 300px;
       img {
         width: 100%;
@@ -96,21 +89,15 @@ button {
     }
     .p-cont {
       font-size: 20px;
-      grid-area: content;
-    }
-    .p-category {
-      grid-area: category;
-    }
-    .p-date {
-      grid-area: date;
-    }
-    .p-author {
-      grid-area: author;
+      margin: auto;
     }
     .p-category,
     .p-author,
     .p-date {
       font-size: 18px;
+    }
+    .p-author{
+      display: block;
     }
   }
 }

@@ -1,6 +1,8 @@
 # BrainUpriseBlog 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20full%20blog%20using%20Angular&url=https://github.com/muaazaltahan/brain-uprise-blog&via=muaazaltahan&hashtags=angular,frontend,blog,developer)
 
+![brain uprise](src/assets/banner2.png)
+
 This project is a new version of my [blog](https://github.com/muaazaltahan/blog) project.  
 I used HTML, CSS, JavaScript, AJAX in the old project  
 For this one I used Angular framework.  
